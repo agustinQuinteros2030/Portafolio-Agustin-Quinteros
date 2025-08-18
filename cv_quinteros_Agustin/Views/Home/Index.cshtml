@@ -1,57 +1,84 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
 }
 
-<header class="container mt-5">
-    <h1 class="mb-3">Agustín Quinteros Serra / Desarrollador Full Stack</h1>
+<div class="container-main">
 
-    <img src="~/Img/imagenPerfil.jpeg"
-         alt="Foto de Agustín Quinteros Serra"
-         class="img-fluid rounded-circle mb-4"
-         style="width: 200px; height: 200px;">
+    <!-- Header con foto y Sobre mí -->
+    <div id="home-header">
+        <div id="fotoPerfil">
+            <img src="~/Img/imagenPerfil.jpeg" alt="Foto de Agustín Quinteros Serra">
+        </div>
 
-    <section class="mb-4" id="sobreMi">
-        <h2>Sobre mí</h2>
-        <p>
-            Soy Agustín, desarrollador full stack .
-        <p>
-            Soy proactivo, responsable y disfruto trabajar en equipo, siempre con ganas de aprender y afrontar nuevos desafíos.
-        </p>
-    </section>
+        <div id="sobreMi">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy Agustín, desarrollador Full Stack.<br>
+                Proactivo, responsable y con ganas de aprender y afrontar nuevos desafíos.<br>
+                Disfruto trabajar en equipo y siempre busco mejorar.
+            </p>
+        </div>
+    </div>
 
-    <section>
+    <!-- Objetivos -->
+    <div class="section-card">
         <h2>Objetivos</h2>
         <p>
-            Busco formar parte de un equipo de trabajo y consolidarme profesionalmente en una empresa
-            donde los logros personales y el desempeño sean reconocidos,
-            además de permitir oportunidades de desarrollo personal y profesional.
+            Formar parte de un equipo de trabajo y consolidarme profesionalmente en una empresa
+            donde los logros personales y el desempeño sean reconocidos.
         </p>
-    </section>
+    </div>
 
-    <section>
-       <h2>Educacion</h2>
+    <!-- Educación -->
+    <div class="section-card">
+        <h2>Educación</h2>
+        <h4>Instituto Tecnológico Ort (2023 - Actualidad)</h4>
+        <p>Segundo año de Analista de Sistemas</p>
 
-       <h4>Instituto Tecnologico Ort  (2023 - Actualidad) </h4>
-       <p>estoy cursando actualmente el segundo año de la carrera de Analista De Sistemas </p>
+        <h4>Instituto Parroquial Cristo Obrero (2014-2019)</h4>
+        <p>Bachiller en Humanidades y Ciencias Sociales</p>
+    </div>
 
-       <h4>Instituto Parroquial Cristo Obrero (2014-2019 ) </h4>
-       <p>Bachiller en humanidades y ciencias Sociales </p>
-      
-    </section>
-
-    <section>
-
-        <h2>Conocimientos</h2>
-
+    <!-- Conocimientos -->
+    <div class="section-card">
+        <h2>Habilidades</h2>
         <ul>
-            <li>Lenguajes: C#, JavaScript, HTML, CSS,Java</li>
-            <li>Frameworks: .NET, ASP.NET Core, Entity Framework,IdentityEntity Framework, React,</li>
-            <li>Bases de datos: SQL Server, MySQL</li>
-            <li>Control de versiones: Git</li>
-            <li>Metodologías ágiles: Scrum, Kanban</li>
-
+            <li><i class="bi bi-file-code-fill"></i> C#</li>
+            <li><i class="bi bi-dot"></i> .NET</li>
+            <li><i class="bi bi-box-seam"></i> ASP.NET Core</li>
+            <li><i class="bi bi-filetype-html"></i> HTML</li>
+            <li><i class="bi bi-filetype-css"></i> CSS</li>
+            <li><i class="bi bi-filetype-js"></i> JavaScript</li>
+            <li><i class="bi bi-filetype-java"></i> Java</li>
+            <li><i class="bi bi-bootstrap"></i> Bootstrap</li>
+            <li><i class="bi bi-recycle"></i> React</li>
+            <li><i class="bi bi-database-fill"></i> MySQL</li>
+            <li><i class="bi bi-database"></i> SQL Server</li>
+            <li><i class="bi bi-git"></i> Git</li>
+            <li><i class="bi bi-check-circle-fill"></i> Pruebas / QA</li>
+            <li><i class="bi bi-tools"></i> Depuración</li>
+            <li><i class="bi bi-diagram-3-fill"></i> Estructuras de Datos y Algoritmos</li>
+            <li><i class="bi bi-lightning-fill"></i> Resolución de Problemas</li>
+            <li><i class="bi bi-chat-dots-fill"></i> Comunicación</li>
+            <li><i class="bi bi-journal-check"></i> Aprendizaje Continuo</li>
+            <li><i class="bi bi-clock-fill"></i> Gestión del Tiempo y Organización</li>
+            <li><i class="bi bi-arrow-repeat"></i> Adaptabilidad</li>
+            <li><i class="bi bi-brush-fill"></i> Creatividad e Innovación</li>
+            <li><i class="bi bi-people-fill"></i> Trabajo en Equipo</li>
+            <li><i class="bi bi-award-fill"></i> Compromiso</li>
+            <li><i class="bi bi-star-fill"></i> Liderazgo</li>
         </ul>
-    </section>
+    </div>
+
+    </div>
+<section id="contacto">
+    <h1>Contacto</h1>
+    <p>Podés ponerte en contacto conmigo por email o redes profesionales.</p>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=agustinquinteros84@gmail.com" target="_blank">Gmail</a>
+    <a href="https://wa.me/541133509594" target="_blank">WhatsApp</a>
+    <a href="https://www.linkedin.com/in/agustin-quinteros-serra-7a2a95251/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/agustinQuinteros2030" target="_blank">GitHub</a>
+</section>
 
 
-</header>
