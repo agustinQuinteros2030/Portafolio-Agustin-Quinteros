@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using cv_quinteros_Agustin.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace cv_quinteros_Agustin.Controllers
 {
