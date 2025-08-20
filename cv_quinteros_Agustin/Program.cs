@@ -20,29 +20,26 @@ namespace cv_quinteros_Agustin
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles(); // Esto reemplaza MapStaticAssets
             app.UseRouting();
-
             app.UseAuthorization();
 
-            app.MapStaticAssets();
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}")
-                .WithStaticAssets();
-
-
+                pattern: "{controller=Home}/{action=Index}/{id?}"
+            );
 
             var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
             app.Urls.Add("http://*:" + port);
 
             app.Run();
 
-           
+
+
         }
     }
 }
