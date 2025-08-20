@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace cv_quinteros_Agustin
 {
@@ -34,7 +35,14 @@ namespace cv_quinteros_Agustin
                 pattern: "{controller=Home}/{action=Index}/{id?}")
                 .WithStaticAssets();
 
+
+
+            var port = Environment.GetEnvironmentVariable("PORT") ?? "5000";
+            app.Urls.Add("http://*:" + port);
+
             app.Run();
+
+           
         }
     }
 }
