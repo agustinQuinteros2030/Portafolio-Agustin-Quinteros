@@ -2,6 +2,6 @@
   - type: web
     name: portafolio-agustin
     plan: free
-    runtime: dotnet
+    runtime: docker
     buildCommand: "dotnet publish ./PortafolioAgustin/PortafolioAgustin.csproj -c Release -o out"
     startCommand: "dotnet ./out/PortafolioAgustin.dll"
