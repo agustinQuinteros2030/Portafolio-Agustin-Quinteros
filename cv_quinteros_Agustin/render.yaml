@@ -1,7 +1,7 @@
 ﻿services:
   - type: web
-    name: portafolio-agustin
+    name: portafolio-agustin      # nombre de tu servicio en Render
+    runtime: docker               # usamos Docker porque .NET no es nativo
     plan: free
-    runtime: docker
-    buildCommand: "dotnet publish ./PortafolioAgustin/PortafolioAgustin.csproj -c Release -o out"
-    startCommand: "dotnet ./out/PortafolioAgustin.dll"
+    autoDeploy: true              # para que haga deploy automático al hacer push
+    healthCheckPath: /            # ruta para chequear que la app está arriba
