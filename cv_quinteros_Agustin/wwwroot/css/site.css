@@ -50,7 +50,46 @@ body {
     margin: 0 auto;
 }
 
+/* Personalización del botón hamburguesa */
+.custom-toggler {
+    border: none;
+    outline: none;
+}
 
+    .custom-toggler .navbar-toggler-icon {
+        background-image: none; /* Quitamos el default */
+        width: 30px;
+        height: 3px;
+        background-color: var(--primary); /* Color de tu tema */
+        display: block;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .custom-toggler .navbar-toggler-icon::before,
+        .custom-toggler .navbar-toggler-icon::after {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary);
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .custom-toggler .navbar-toggler-icon::before {
+            top: -8px;
+        }
+
+        .custom-toggler .navbar-toggler-icon::after {
+            top: 8px;
+        }
+
+    .custom-toggler:hover .navbar-toggler-icon,
+    .custom-toggler:hover .navbar-toggler-icon::before,
+    .custom-toggler:hover .navbar-toggler-icon::after {
+        background-color: var(--hover); /* Al pasar el mouse cambia */
+    }
 
 
 
@@ -277,23 +316,43 @@ a {
         transition: transform 0.2s, background-color 0.3s;
     }
 
-        .section-card ul li i {
-            font-size: 1rem;
-            color: var(--color-secundario);
+============================ */
+.section-card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.section-card ul li {
+    background-color: var(--color-hover);
+    color: var(--color-texto);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+    .section-card ul li i {
+        font-size: 1rem;
+        color: var(--color-secundario); /* íconos dorados */
+        transition: color 0.3s;
+    }
+
+    .section-card ul li:hover {
+        transform: translateY(-3px);
+        background-color: var(--color-secundario);
+        color: var(--color-primario);
+    }
+
+        .section-card ul li:hover i {
+            color: var(--color-primario); /* íconos se vuelven azules al hover */
         }
-
-        .section-card ul li:hover {
-            transform: translateY(-3px);
-            background-color: var(--color-secundario);
-            color: var(--color-primario);
-        }
-
-            .section-card ul li:hover i {
-                color: var(--color-primario);
-       
-                
-                }
-
 
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
