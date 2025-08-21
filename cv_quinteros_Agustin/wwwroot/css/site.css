@@ -56,39 +56,46 @@ body {
     outline: none;
 }
 
-    .custom-toggler .navbar-toggler-icon {
-        background-image: none; /* Quitamos el default */
-        width: 30px;
-        height: 3px;
-        background-color: var(--primary); /* Color de tu tema */
+/* Botón hamburguesa visible y respetando temática */
+.navbar-toggler {
+    border: 2px solid var(--color-secundario); /* contorno dorado */
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+}
+
+    .navbar-toggler .navbar-toggler-icon {
+        background-image: none; /* quitamos default */
         display: block;
         position: relative;
+        width: 25px;
+        height: 2px;
+        background-color: var(--color-secundario);
         transition: all 0.3s ease-in-out;
     }
 
-        .custom-toggler .navbar-toggler-icon::before,
-        .custom-toggler .navbar-toggler-icon::after {
+        .navbar-toggler .navbar-toggler-icon::before,
+        .navbar-toggler .navbar-toggler-icon::after {
             content: "";
-            width: 30px;
-            height: 3px;
-            background-color: var(--primary);
             position: absolute;
-            left: 0;
+            width: 25px;
+            height: 2px;
+            background-color: var(--color-secundario);
             transition: all 0.3s ease-in-out;
         }
 
-        .custom-toggler .navbar-toggler-icon::before {
+        .navbar-toggler .navbar-toggler-icon::before {
             top: -8px;
         }
 
-        .custom-toggler .navbar-toggler-icon::after {
+        .navbar-toggler .navbar-toggler-icon::after {
             top: 8px;
         }
 
-    .custom-toggler:hover .navbar-toggler-icon,
-    .custom-toggler:hover .navbar-toggler-icon::before,
-    .custom-toggler:hover .navbar-toggler-icon::after {
-        background-color: var(--hover); /* Al pasar el mouse cambia */
+    /* Hover */
+    .navbar-toggler:hover .navbar-toggler-icon,
+    .navbar-toggler:hover .navbar-toggler-icon::before,
+    .navbar-toggler:hover .navbar-toggler-icon::after {
+        background-color: var(--color-hover);
     }
 
 
